@@ -1,12 +1,13 @@
 name: env_tutorial
 on: [pull_request,push]
 
-env:
-  API_KEY: XXXXXXXXXX
+
   
 jobs:
   job1:
     runs-on: ubuntu-latest
+    env:
+      API_KEY: XXXXXXXXXX
     steps:
     - name: step1
       run: echo "The API key is:${{env.API_KEY}}"
